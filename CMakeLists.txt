@@ -20,9 +20,23 @@ set(CMAKE_CXX_EXTENSIONS)
 
 # List of options.
 option(COMPILE_EXECUTABLE "Whether to compile executable or not" ON)
-option(ENABLE_TESTING "Whether to compile test or not" ON)
+option(ENABLE_TESTING "Whether to compile test or not" OFF)
+option(USE_VCPKG "Whether or not to use vcpkg" ON)
 
 # Set variable name for Library and Executable.
 set(LIBRARY_NAME Libary)
 set(EXECUTABLE_NAME OpenGLTut)
 
+# Inlcuding external libraries from VCPKG.
+if(USE_VCPKG)
+    include("C:/Program Files/vcpkg/scripts/buildsystems/vcpkg.cmake")
+    find_package(GLEW REQUIRED)
+    find_package(glfw3 CONFIG REQUIRED)
+endif()
+
+# Adding subdirectories.
+add_subdirectory(configured)
+add_subdirectory(src)
+if(COMPILE_EXECUTABLE)
+    add_subdirectory(app)
+endif()

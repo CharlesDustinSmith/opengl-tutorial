@@ -1,0 +1,18 @@
+{
+    "name": "opengl-tutorial",
+    "version-string": "1.0.0",
+    "dependencies": [
+        {
+            "name": "glew",
+            "version>=": "2.2.0#3"
+        },
+        {
+            "name": "glfw3",
+            "version>=": "3.3.8#2"
+        }
+    ],
+    "overrides": [
+        { "name": "glew", "version": "2.2.0#3"}
+    ],
+    "builtin-baseline": "e21c414460498b0c7c94d815ad6d1a3d313ff28b"
+}
