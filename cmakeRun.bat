@@ -7,9 +7,15 @@ cmake -S . ^
 -A x64
 
 @REM Command to build the cmake project.
-cd build
-MSBuild.exe ./OpenGLTutorial.sln
+echo "Building solution file"
+MSBuild.exe ./build/OpenGLTutorial.sln
 @REM cmake --build ./Build --config Debug
 
 @REM Running the executable
-./app/Debug/OpenGLTut.exe
+echo "Change to executable directory (./build/app/Debug/)"
+cd ./build/app/Debug/
+echo "Running executable ./OpenGLTut.exe"
+OpenGLTut.exe
+echo "Returning back to the Project home directory"
+cd ../../../
+

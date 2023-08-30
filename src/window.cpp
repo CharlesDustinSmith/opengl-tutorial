@@ -1,6 +1,6 @@
 #include "window.h"
 
-int openglTutWindow(GLint height, GLint width)
+int openglTutWindow(GLint width, GLint height)
 {
     // Initialise GLFW
     if(!glfwInit())
@@ -39,7 +39,7 @@ int openglTutWindow(GLint height, GLint width)
     glewExperimental = GL_TRUE;
 
     // Initialize glew
-    if(!glewInit())
+    if(glewInit() != GLEW_OK)
     {
         printf("GLEW initialisation failed!");
         glfwDestroyWindow(mainWindow);
@@ -59,6 +59,8 @@ int openglTutWindow(GLint height, GLint width)
         // Clear Window
         glClearColor(1.0f, 0.0f, 0.0f, 0.5f);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        glfwSwapBuffers(mainWindow);
     }
 
     return 0;
