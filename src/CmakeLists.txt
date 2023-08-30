@@ -1,0 +1,15 @@
+set(LIBRARY_SOURCES "")
+
+# Variable for includes 
+set(LIBRARY_INCLUDES 
+    "./include/"
+    "${CMAKE_BINARY_DIR}/configured_files/include"
+)
+
+# External link libraries.
+set(LINK_LIBRARIES "")
+
+# Adding the library to the project
+add_library(${LIBRARY_NAME} STATIC ${LIBRARY_SOURCES})
+
+target_include_directories(${LIBRARY_NAME} PUBLIC ${LIBRARY_INCLUDES})
