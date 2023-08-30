@@ -6,7 +6,8 @@ list(APPEND LIBRARY_HEADERS "window.h")
 # Variable for includes 
 set(LIBRARY_INCLUDES 
     "./include/"
-    "${CMAKE_BINARY_DIR}/configured_files/include"
+    "${CMAKE_BINARY_DIR}/configured_files/include/"
+    "${VCPKG_INSTALLED_DIR}/x64-windows/include/"
 )
 
 # External link libraries.
@@ -14,10 +15,8 @@ list(APPEND LINK_LIBRARIES GLEW::GLEW)
 list(APPEND LINK_LIBRARIES glfw)
 
 # Adding the library to the project
-add_library(${LIBRARY_NAME} STATIC 
-    ${LIBRARY_SOURCES}
-    ${LIBRARY_HEADERS} 
-)
+add_library(${LIBRARY_NAME} STATIC ${LIBRARY_SOURCES})
+
 
 target_include_directories(${LIBRARY_NAME} PUBLIC ${LIBRARY_INCLUDES})
 

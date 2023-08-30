@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.25)
 
 # Defining the name of the project, the version, and language permitted.
 project(
-    OpenGL-Tutorial
+    OpenGLTutorial
     VERSION 1.0.0
     LANGUAGES C CXX
 ) 
@@ -24,7 +24,7 @@ option(ENABLE_TESTING "Whether to compile test or not" OFF)
 option(USE_VCPKG "Whether or not to use vcpkg" ON)
 
 # Set variable name for Library and Executable.
-set(LIBRARY_NAME Libary)
+set(LIBRARY_NAME Library)
 set(EXECUTABLE_NAME OpenGLTut)
 
 # Inlcuding external libraries from VCPKG.
