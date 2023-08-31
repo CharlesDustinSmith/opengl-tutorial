@@ -11,9 +11,6 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: clean
-      run: |
-        .\removeBuild.bat
     - name: configureAndBuild
       run: |
         .\cmakeRun.bat
