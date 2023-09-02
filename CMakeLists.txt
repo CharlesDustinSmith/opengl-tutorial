@@ -29,6 +29,9 @@ set(EXECUTABLE_NAME OpenGLTut)
 
 # Inlcuding external libraries from VCPKG.
 if(USE_VCPKG)
+    execute_process(
+        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/runVcpkg.bat
+    )
     include("C:/Program Files/vcpkg/scripts/buildsystems/vcpkg.cmake")
     find_package(GLEW REQUIRED)
     find_package(glfw3 CONFIG REQUIRED)
