@@ -30,3 +30,21 @@ As of today, higher versions of OpenGL are available to choose from (at the time
 
 When using functionality from the most recent version of OpenGL, only the most modern graphics cards will be able to run your application. This is often why most developers generally target lower versions of OpenGL and optionally enable higher version functionality.
 In some chapters you'll find more modern features which are noted down as such.
+
+# Extensions 
+A great feature of OpenGL is its support of extensions. Whenever a graphics company comes up with a new technique or a new large optimization for rendering this is often found in an extension implemented in the drivers. If the hardware an application runs on supports such an extension the developer can use the functionality provided by the extension for more advanced or efficient graphics. This way, a graphics developer can still use these new rendering techniques without having to wait for OpenGL to include the functionality in its future versions, simply by checking if the extension is supported by the graphics card. Often, when an extension is popular or very useful it eventually becomes part of future OpenGL versions.
+
+The developer has to query whether any of these extensions are available before using them (or use an OpenGL extension library). This allows the developer to do things better or more efficient, based on whether an extension is available:
+
+```cpp
+if(GL_ARB_extension_name)
+{
+    // Do cool new and modern stuff supported by hardware
+}
+else
+{
+    // Extension not supported: do it the old way
+}
+```
+With OpenGL version 3.3 we rarely need an extension for most techniques, but wherever it is necessary proper instructions are provided.
+
