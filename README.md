@@ -48,3 +48,21 @@ else
 ```
 With OpenGL version 3.3 we rarely need an extension for most techniques, but wherever it is necessary proper instructions are provided.
 
+# OpenGL® 4.5 Reference Pages
+Use the index on the left to choose any OpenGL 4.5 reference page for viewing. These pages include all of the important usage information for each command and function. This information includes a description of all parameters, return values, error conditions, related commands and functions, and version support.
+
+There are two forms of the index which can be selected by clicking at the top of the navigation bar on the left side: a traditional flat index combining the API commands and GLSL functions, and an accordion-style index with separate sections for commands and functions. The flat index also includes per-letter section links.
+
+# Core Context Functionality
+These man pages only document OpenGL 4.5 core context functionality. For compatibility context specific functionality, please refer to the OpenGL 2.1 Reference Pages and/or the appropriate extension specification you are interested in using.
+
+# Browser Compatibility
+Very old browsers, such as IE8, may not work with parts of this site. Please use modern browsers supporting HTML5 (e.g. IE9 and later).
+
+The ref pages are generated in HTML5 format with imbedded MathML, and rely on MathJax to render mathematical equations on browsers which do not natively support MathML. This should work on Chrome, Safari, and other browsers which don't support MathML natively.
+
+# Downloading Man Page Sources
+The Docbook source for the reference pages is available from the OpenGL-Refpages github repository.
+
+# Feedback
+If you find any inaccuracies or typos in the reference pages, please file an issue (and, preferably, propose a pull request fixing the issue) in the OpenGL-Refpages github repository.
