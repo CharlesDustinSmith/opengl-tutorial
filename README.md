@@ -66,3 +66,8 @@ The Docbook source for the reference pages is available from the OpenGL-Refpages
 
 # Feedback
 If you find any inaccuracies or typos in the reference pages, please file an issue (and, preferably, propose a pull request fixing the issue) in the OpenGL-Refpages github repository.
+
+# What is GLFW 
+Although GLFW does not have any official full form or alias, it is a consensus among the OpenGL community that GLFW stands for OpenGL FrameWork.
+GLFW is an open-source, multi-platform library for OpenGL on the desktop that provides an API for creating and controlling windows, contexts and surfaces.
+It can also be used to detect, process and handle input from various I/O devices such as keyboard, mouse, joystick, etc. GLFW also supports multiple monitors/displays.
