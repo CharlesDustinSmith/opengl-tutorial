@@ -4,11 +4,19 @@ list(APPEND LIBRARY_SOURCES "window.cpp")
 list(APPEND LIBRARY_HEADERS "window.h")
 
 # Variable for includes 
-set(LIBRARY_INCLUDES 
-    "./include/"
-    "${CMAKE_BINARY_DIR}/configured_files/include/"
-    "${VCPKG_INSTALLED_DIR}/x64-windows/include/"
-)
+if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    set(LIBRARY_INCLUDES 
+        "./include/"
+        "${CMAKE_BINARY_DIR}/configured_files/include/"
+        "${VCPKG_INSTALLED_DIR}/x64-windows/include/"
+    )
+else()
+    set(LIBRARY_INCLUDES 
+        "./include/"
+        "${CMAKE_BINARY_DIR}/configured_files/include/"
+        "${VCPKG_INSTALLED_DIR}/x64-linux/include/"
+    )
+endif()
 
 # External link libraries.
 list(APPEND LINK_LIBRARIES GLEW::GLEW)
