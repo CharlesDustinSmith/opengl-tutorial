@@ -1,9 +1,9 @@
 # List variable for library source(.cpp) files
 list(APPEND LIBRARY_SOURCES "window.cpp")
 # List variable for library header(.h) files
-list(APPEND LIBRARY_HEADERS "window.h")
+list(APPEND LIBRARY_HEADERS "include/window.h")
 
-# Variable for includes 
+# Variable for includes Checking to see if it is a windows OS first
 if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
     set(LIBRARY_INCLUDES 
         "./include/"
@@ -23,8 +23,10 @@ list(APPEND LINK_LIBRARIES GLEW::GLEW)
 list(APPEND LINK_LIBRARIES glfw)
 
 # Adding the library to the project
-add_library(${LIBRARY_NAME} STATIC ${LIBRARY_SOURCES})
-
+add_library(${LIBRARY_NAME} STATIC 
+            ${LIBRARY_SOURCES}
+            ${LIBRARY_HEADERS}
+)
 
 target_include_directories(${LIBRARY_NAME} PUBLIC ${LIBRARY_INCLUDES})
 
