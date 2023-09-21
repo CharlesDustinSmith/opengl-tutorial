@@ -53,15 +53,18 @@ int openglTutWindow(GLint width, GLint height)
     // Loop until window close
     while(!glfwWindowShouldClose(mainWindow))
     {
-        // Get and handle user input event
-        glfwPollEvents();
-
         // Clear Window
         glClearColor(1.0f, 0.0f, 0.0f, 0.5f);
         glClear(GL_COLOR_BUFFER_BIT);
-
+        
         glfwSwapBuffers(mainWindow);
+        // Get and handle user input event
+        glfwPollEvents();
     }
+
+    // Should destroy the window.
+    glfwDestroyWindow(mainWindow);
+    glfwTerminate();
 
     return 0;
 }

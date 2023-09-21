@@ -16,6 +16,6 @@ cd ./build/app
 echo "Running executable ./OpenGLTut"
 ./OpenGLTut
 echo "Returning back to the Project home directory"
-cd ../../../
+cd ../../
 
 
