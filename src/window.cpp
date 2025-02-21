@@ -1,7 +1,15 @@
 #include "window.h"
 
+bool windowCreated = false;
+
 int openglTutWindow(GLint width, GLint height)
 {
+    
+    if(windowCreated)
+    {
+        printf("Window already created!");
+        return 1;
+    }
     // Initialise GLFW
     if(!glfwInit())
     {
@@ -63,5 +71,7 @@ int openglTutWindow(GLint width, GLint height)
         glfwSwapBuffers(mainWindow);
     }
 
+
+    windowCreated = true;
     return 0;
 }
